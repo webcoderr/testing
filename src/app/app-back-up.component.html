@@ -1,0 +1,44 @@
+    <label class="btn btn-primary" > <input type="file" #fileInput accept="image/*" (change)="uploadPhoto($event)" style="display: none;"> Upload Photo </label>
+    <div>
+<!--      
+     <img-cropper [image]="data1" [settings]="cropperSettings1" (onCrop)="cropped($event)"></img-cropper>
+     <span class="result" *ngIf="data1.image" >
+        <img [src]="data1.image" 
+        [width]="croppedWidth" 
+        [height]="croppedHeight">
+        {{data1.image.length}}
+    </span>
+     -->
+
+    </div>
+
+    <div class="file-upload">
+        <!-- <span class="text">upload</span> -->
+        <!-- <input id="custom-input" type="file" (change)="fileChangeListener($event)"> -->
+    </div>
+    <img-cropper #cropper [image]="data" [settings]="cropperSettings"></img-cropper>
+    <br>
+    <span class="result rounded" *ngIf="data.image" >
+        <img [src]="data.image" [width]="cropperSettings.croppedWidth" [height]="cropperSettings.croppedHeight">
+    </span>    
+
+<!--     <angular-cropper [cropperOptions]="config" [imageUrl]="imageUrl"></angular-cropper> -->
+
+
+  <div class="container">
+    <h1>Customize preview for Cropper</h1>
+    <div class="row">
+      <div class="col col-6">
+        <img id="image" src="./assets/test.jpg" alt="Picture">
+      </div>
+      <div class="col col-3">
+        <div class="preview"></div>
+      </div>
+      <div class="col col-2">
+        <div class="preview"></div>
+      </div>
+      <div class="col col-1">
+        <div class="preview"></div>
+      </div>
+    </div>
+  </div>
